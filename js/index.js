@@ -19,6 +19,7 @@ btn1.addEventListener('mouseover', event => {
   btn1.style.color = "black"; 
   btn1.style.transform = "rotate(-15deg)";
   btn1.style.border = "2px solid black";
+
 })
 
 btn2.addEventListener('click', event => {
@@ -87,6 +88,7 @@ islandBoatImg.addEventListener('click', event => {
 });
 
 
+//TYPE "FUN BUS!" ON PAGE
 
 document.addEventListener('keydown', event => {
     switch (event.keyCode) {
@@ -105,6 +107,7 @@ document.addEventListener('keydown', event => {
         //SPACE  
         case 32:
           setBackgroundColor('yellow');
+          event.preventDefault();
           break;
         //B  
         case 66:
@@ -123,3 +126,43 @@ document.addEventListener('keydown', event => {
   function setBackgroundColor(color) {
       document.querySelector('body').style.backgroundColor = color;
   }
+
+let aTag0 = document.querySelector(".a0");
+let aTag1 = document.querySelector(".a1");
+let aTag2 = document.querySelector(".a2");
+let aTag3 = document.querySelector(".a3");
+
+
+aTag0.addEventListener('click', event => {
+  aTag0.style.transform = "rotate(-15deg)";
+  aTag0.style.color = "red";
+  aTag0.style.fontWeight = "bold";
+  event.preventDefault();
+});
+
+aTag1.addEventListener('click', event => {
+  aTag1.style.transform = "rotate(15deg)";
+  aTag1.style.color = "green";
+  aTag1.style.fontWeight = "bold";
+  event.preventDefault();
+});
+
+aTag2.addEventListener('click', event => {
+  aTag2.style.transform = "rotate(-15deg)";
+  aTag2.style.color = "blue";
+  aTag2.style.fontWeight = "bold";
+  event.preventDefault();
+});
+
+aTag3.addEventListener('click', event => {
+  aTag3.style.transform = "rotate(15deg)";
+  aTag3.style.color = "yellow";
+  aTag3.style.fontWeight = "bold";
+  event.preventDefault();
+});
+
+const headerNav = document.querySelector("header");
+headerNav.addEventListener('wheel', event => {
+  headerNav.style.background = "#666";
+});
+
