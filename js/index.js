@@ -1,11 +1,12 @@
 // Your code goes here
 
-// BUTTONS
+// BUTTONS ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 const btn1 = document.querySelector('.btn1');
 const btn2 = document.querySelector('.btn2');
 const btn3 = document.querySelector('.btn3');
 
+// Fun In The Sun Button
 
 btn1.addEventListener('click', event => {
   btn1.style.background = "white";
@@ -22,6 +23,8 @@ btn1.addEventListener('mouseover', event => {
 
 })
 
+// Mountain Excursion Button
+
 btn2.addEventListener('click', event => {
   btn2.style.background = "darkgrey";
   btn2.style.color = "white";
@@ -35,6 +38,8 @@ btn2.addEventListener('mouseover', event => {
   btn2.style.transform = "rotate(-15deg)"; 
   btn2.style.border = "2px solid black";
 })
+
+// Island Getaway Button
 
 btn3.addEventListener('click', event => {
   btn3.style.background = "black";
@@ -50,17 +55,14 @@ btn3.addEventListener('mouseover', event => {
   btn3.style.border = "2px solid black";
 })
 
-// IMAGES
-const funBus = document.querySelector('.funBus');
+// IMAGES //////////////////////////////////////////////////////////////////////////////////////
+
 const busImg = document.querySelector(".busImg");
 const mapImg = document.querySelector('.mapImg');
 const cityBoatImg = document.querySelector('.cityBoatImg');
 const islandBoatImg = document.querySelector('.islandBoatImg');
 
-funBus.addEventListener('mouseover', event => {
-    alert("Click The Images For A Better Look!");
-    
-  });
+// Image Of Toy Bus In Sand
 
 busImg.addEventListener('click', event => {
     busImg.style.marginTop = "30px";
@@ -69,17 +71,23 @@ busImg.addEventListener('click', event => {
     busImg.style.boxShadow = "0px 0px 25px 3px black";
 });
 
+// Image Of Map On Table
+
 mapImg.addEventListener('click', event => {
     mapImg.style.borderRadius = "15px";
     mapImg.style.border = "2px solid black";
     mapImg.style.boxShadow = "0px 0px 25px 3px black";
 });
 
+// Image Of Boat In The City
+
 cityBoatImg.addEventListener('click', event => {
     cityBoatImg.style.borderRadius = "15px";
     cityBoatImg.style.border = "2px solid black";
     cityBoatImg.style.boxShadow = "0px 0px 25px 3px black";
 });
+
+// Image Of Boat On The Shore
 
 islandBoatImg.addEventListener('click', event => {
     islandBoatImg.style.borderRadius = "15px";
@@ -88,7 +96,7 @@ islandBoatImg.addEventListener('click', event => {
 });
 
 
-//TYPE "FUN BUS!" ON PAGE
+//TYPE "FUN BUS!" ON PAGE ////////////////////////////////////////////////////////////////////////////////////
 
 document.addEventListener('keydown', event => {
     switch (event.keyCode) {
@@ -122,16 +130,29 @@ document.addEventListener('keydown', event => {
           setBackgroundColor('white');
     }
   });
-        
+      
+  // Background Color Function
+
   function setBackgroundColor(color) {
       document.querySelector('body').style.backgroundColor = color;
   }
 
-let aTag0 = document.querySelector(".a0");
-let aTag1 = document.querySelector(".a1");
-let aTag2 = document.querySelector(".a2");
-let aTag3 = document.querySelector(".a3");
 
+// NAVIGATION BAR ////////////////////////////////////////////////////////////////////////////////////////////
+
+const funBus = document.querySelector('.funBus');
+const aTag0 = document.querySelector(".a0");
+const aTag1 = document.querySelector(".a1");
+const aTag2 = document.querySelector(".a2");
+const aTag3 = document.querySelector(".a3");
+
+// Fun Bus Navigation Text
+
+funBus.addEventListener('mouseover', event => {
+  alert("Click The Images For A Better Look!"); 
+});
+
+// Home aTag
 
 aTag0.addEventListener('click', event => {
   aTag0.style.transform = "rotate(-15deg)";
@@ -140,12 +161,16 @@ aTag0.addEventListener('click', event => {
   event.preventDefault();
 });
 
+// About Us aTag
+
 aTag1.addEventListener('click', event => {
   aTag1.style.transform = "rotate(15deg)";
   aTag1.style.color = "green";
   aTag1.style.fontWeight = "bold";
   event.preventDefault();
 });
+
+// Blog aTag
 
 aTag2.addEventListener('click', event => {
   aTag2.style.transform = "rotate(-15deg)";
@@ -154,12 +179,16 @@ aTag2.addEventListener('click', event => {
   event.preventDefault();
 });
 
+// Contact aTag
+
 aTag3.addEventListener('click', event => {
   aTag3.style.transform = "rotate(15deg)";
   aTag3.style.color = "yellow";
   aTag3.style.fontWeight = "bold";
   event.preventDefault();
 });
+
+// Wheel Trigger Header Background Color Change
 
 const headerNav = document.querySelector("header");
 headerNav.addEventListener('wheel', event => {
